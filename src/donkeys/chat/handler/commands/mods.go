@@ -8,6 +8,7 @@ import (
 	"donkeys/chat/structs"
 )
 
-func mods(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
+// Mods lists the bot's current mods
+func Mods(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
 	channel.Message(conn, throttle, fmt.Sprintf("Current %v moderators: %v", channel.CurrencyName, strings.Join(channel.Mods, ", ")))
 }

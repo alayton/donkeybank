@@ -16,7 +16,8 @@ import (
 	"donkeys/chat/structs"
 )
 
-func buyCommand(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
+// BuyCommand allows users to buy a temporary command (!buycommand <duration_in_days> <message>)
+func BuyCommand(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
 	parts := strings.SplitN(rest, " ", 3)
 	if len(parts) != 3 {
 		return

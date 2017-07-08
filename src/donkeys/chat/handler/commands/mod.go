@@ -21,7 +21,8 @@ func isMod(channel *structs.ChannelSettings, msg structs.ServerMessage) bool {
 	return false
 }
 
-func mod(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
+// Mod allows the channel owner to give a user moderator privileges for the bot
+func Mod(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
 	if msg.Source != channel.Name {
 		return
 	}

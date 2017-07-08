@@ -11,7 +11,8 @@ import (
 	"donkeys/chat/structs"
 )
 
-func unmod(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
+// Unmod allows the channel owner to remove moderator privileges for the bot from a user
+func Unmod(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
 	if msg.Source != channel.Name {
 		return
 	}

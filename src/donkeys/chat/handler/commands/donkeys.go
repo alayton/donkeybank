@@ -13,7 +13,8 @@ import (
 	"donkeys/chat/structs"
 )
 
-func donkeys(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
+// Donkeys reports the amount of currency a user has
+func Donkeys(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
 	boltdb := viper.Get("Bolt").(*bolt.DB)
 
 	if err := boltdb.View(func(tx *bolt.Tx) error {

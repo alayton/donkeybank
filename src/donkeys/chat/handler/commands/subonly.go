@@ -13,7 +13,8 @@ import (
 	"donkeys/chat/structs"
 )
 
-func subMode(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
+// SubOnly puts the channel in sub only mode for two minutes, if modded
+func SubOnly(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
 	boltdb := viper.Get("Bolt").(*bolt.DB)
 
 	if err := boltdb.Update(func(tx *bolt.Tx) error {

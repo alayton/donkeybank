@@ -11,29 +11,30 @@ import (
 	"github.com/boltdb/bolt"
 	"github.com/spf13/viper"
 
+	"donkeys/chat/handler/commands"
 	"donkeys/chat/structs"
 )
 
-var commands = map[string]func(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string){
-	"!commands":   help,
-	"!mods":       mods,
-	"!donkeys":    donkeys,
-	"!gamble":     gamble,
-	"!subonly":    subMode,
-	"!emoteonly":  emoteMode,
-	"!buycommand": buyCommand,
+var botCommands = map[string]func(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string){
+	"!commands":   commands.Commands,
+	"!mods":       commands.Mods,
+	"!donkeys":    commands.Donkeys,
+	"!gamble":     commands.Gamble,
+	"!subonly":    commands.SubOnly,
+	"!emoteonly":  commands.EmoteOnly,
+	"!buycommand": commands.BuyCommand,
 
-	"!mod":     mod,
-	"!unmod":   unmod,
-	"!give":    give,
-	"!refresh": refresh,
+	"!mod":     commands.Mod,
+	"!unmod":   commands.Unmod,
+	"!give":    commands.Give,
+	"!refresh": commands.Refresh,
 }
 
 // Privmsg parses PRIVMSG messages for commands
 func Privmsg(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time) {
 	parts := strings.SplitN(msg.Text, " ", 2)
 	command := strings.ToLower(parts[0])
-	if cmd, ok := commands[command]; ok {
+	if cmd, ok := botCommands[command]; ok {
 		rest := ""
 		if len(parts) > 1 {
 			rest = parts[1]

@@ -16,7 +16,8 @@ import (
 	"donkeys/chat/structs"
 )
 
-func gamble(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
+// Gamble allows users to increase their currency through gambling (!gamble <amount_to_bet>)
+func Gamble(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
 	gocache := viper.Get("Cache").(*cache.Cache)
 	cooldownKey := fmt.Sprintf("gamble:%v:%v", channel.Name, msg.Source)
 	if readyTime, ok := gocache.Get(cooldownKey); ok {

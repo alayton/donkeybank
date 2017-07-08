@@ -13,7 +13,8 @@ import (
 	"donkeys/chat/structs"
 )
 
-func emoteOnly(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
+// EmoteOnly puts the channel in emote only mode for two minutes, if modded
+func EmoteOnly(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
 	boltdb := viper.Get("Bolt").(*bolt.DB)
 
 	if err := boltdb.Update(func(tx *bolt.Tx) error {

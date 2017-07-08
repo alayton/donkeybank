@@ -14,7 +14,8 @@ import (
 	"donkeys/chat/structs"
 )
 
-func give(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
+// Give allows mods to give users currency (!give <username> <amount>)
+func Give(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string) {
 	if !isMod(channel, msg) {
 		return
 	}
