@@ -1,0 +1,9 @@
+SqlHost:
+SqlUser: donkeys
+SqlPass:
+Database: donkeys
+Port: 3100
+Debug: true
+TwitchChatUsername: donkeybank
+TwitchChatPassword:
+TwitchClientID:

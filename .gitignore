@@ -1,0 +1,12 @@
+*.yaml
+*.exe
+.vscode/
+*.xml
+*.db
+*.lock
+*.csv
+/web
+/models
+pkg/
+bin/
+node_modules/
