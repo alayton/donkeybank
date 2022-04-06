@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/boltdb/bolt"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 // Give allows mods to give users currency (!give <username> <amount>)

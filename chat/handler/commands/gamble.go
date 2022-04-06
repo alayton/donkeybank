@@ -8,12 +8,12 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/boltdb/bolt"
 	"github.com/patrickmn/go-cache"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 // Gamble allows users to increase their currency through gambling (!gamble <amount_to_bet>)

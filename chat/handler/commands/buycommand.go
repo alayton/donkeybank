@@ -8,12 +8,12 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/boltdb/bolt"
 	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 // BuyCommand allows users to buy a temporary command (!buycommand <duration_in_days> <message>)

@@ -8,13 +8,13 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/boltdb/bolt"
 	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"donkeys/chat/handler"
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/handler"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 /*

@@ -6,11 +6,11 @@ import (
 	"strconv"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/boltdb/bolt"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 // Donkeys reports the amount of currency a user has

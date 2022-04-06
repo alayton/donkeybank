@@ -8,17 +8,17 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/boltdb/bolt"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gorilla/mux"
 	"github.com/jmoiron/sqlx"
 	"github.com/justinas/alice"
 	"github.com/patrickmn/go-cache"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"donkeys/chat"
-	"donkeys/respond"
+	"github.com/alayton/donkeybank/chat"
+	"github.com/alayton/donkeybank/respond"
 )
 
 var db *sqlx.DB

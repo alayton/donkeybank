@@ -7,9 +7,9 @@ import (
 	"net/http"
 	"runtime"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 
-	"donkeys/respond"
+	"github.com/alayton/donkeybank/respond"
 )
 
 var (

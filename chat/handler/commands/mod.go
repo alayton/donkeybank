@@ -5,11 +5,11 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/jmoiron/sqlx"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 func isMod(channel *structs.ChannelSettings, msg structs.ServerMessage) bool {

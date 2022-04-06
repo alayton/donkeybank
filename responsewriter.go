@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	log "github.com/Sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 )
 
 type responseWriter struct {

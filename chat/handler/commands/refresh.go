@@ -3,7 +3,7 @@ package commands
 import (
 	"time"
 
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 // Refresh forces the bot to update settings from the database

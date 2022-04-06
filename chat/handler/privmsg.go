@@ -7,12 +7,12 @@ import (
 	"strings"
 	"time"
 
-	log "github.com/Sirupsen/logrus"
 	"github.com/boltdb/bolt"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
 
-	"donkeys/chat/handler/commands"
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/handler/commands"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 var botCommands = map[string]func(channel *structs.ChannelSettings, msg structs.ServerMessage, conn chan string, throttle chan time.Time, rest string){

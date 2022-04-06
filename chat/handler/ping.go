@@ -3,7 +3,7 @@ package handler
 import (
 	"time"
 
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 // Ping responds to PING commands with PONG

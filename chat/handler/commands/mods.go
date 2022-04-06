@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 // Mods lists the bot's current mods

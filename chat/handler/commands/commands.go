@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"donkeys/chat/structs"
+	"github.com/alayton/donkeybank/chat/structs"
 )
 
 // Commands lists the available commands
